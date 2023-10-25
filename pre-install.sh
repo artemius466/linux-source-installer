@@ -12,13 +12,14 @@ mkdir -p in-cache
 
 
 # Install dependencies
-sudo pacman -S wget dosfstools qemu-system-x86 git
+sudo pacman -S wget dosfstools qemu-system-x86 git bc cpio
 clear
 echo INSTALLING LIBCRYPT
 
 # Install lybcrypt.a
+mkdir in-cache
 cd in-cache
-wget 'http://ftp.ru.debian.org/debian/pool/main/libx/libxcrypt/' + $LIBCRYPTFILE # If not working, check this: https://packages.debian.org/sid/arm64/libcrypt-dev/download
+wget 'http://ftp.ru.debian.org/debian/pool/main/libx/libxcrypt/libcrypt-dev_4.4.36-2_amd64.deb' # If not working, check this: https://packages.debian.org/sid/arm64/libcrypt-dev/download
 ar x $LIBCRYPTFILE
 tar xf data.tar.xz
 sudo cp usr/lib/x86_64-linux-gnu/libcrypt.a /lib/
