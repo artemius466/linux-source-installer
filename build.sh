@@ -28,3 +28,5 @@ for prog in $(./busybox --list); do ln -s /bin/busybox $prog; done
 cd ..
 find . | cpio -o -H newc > ../../linux/initrd-busybox-1.35.0.img
 cd ../../
+
+./startvm.sh

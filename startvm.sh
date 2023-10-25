@@ -1,0 +1,1 @@
+qemu-system-x86_64 -kernel linux/vmlinuz-5.15.79 -initrd linux/initrd-busybox-1.35.0.img -nographic -append 'console=ttyS0'
